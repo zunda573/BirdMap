@@ -1,5 +1,14 @@
+const supabaseUrl =
+    "https://joxazhcjwasgpknxufif.supabase.co";
 
+const supabaseKey =
+    "sb_publishable_lmDUsTIEnmiFnic3yH16NA_NrRNst4F";
 
+const supabaseClient =
+    window.supabase.createClient(
+        supabaseUrl,
+        supabaseKey
+    );
         const map = L.map('map').setView([35.6812, 139.7671], 13);
 
         L.tileLayer(
@@ -765,15 +774,6 @@ function showRankingStats(){
     .innerHTML = html;
 
 }
-
-document
-.getElementById(
-    "dateFilterButton"
-)
-.addEventListener(
-    "click",
-    filterByDate
-);
 
 function clearDateFilter(){
 
